@@ -62,13 +62,19 @@ const FloatingVoiceButton = () => {
   return (
     <div
       ref={buttonRef}
-      className="fixed z-50 cursor-move"
+      className="fixed z-50 cursor-move flex items-center gap-3"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
       }}
       onMouseDown={handleMouseDown}
     >
+      <div className="bg-background/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-border/50">
+        <span className="text-sm font-inter font-semibold text-foreground whitespace-nowrap">
+          KI-Buchung
+        </span>
+      </div>
+      
       <Button
         size="lg"
         onClick={handleClick}
@@ -79,7 +85,7 @@ const FloatingVoiceButton = () => {
       </Button>
       
       {/* Ripple effect on hover */}
-      <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-ping pointer-events-none" />
+      <div className="absolute right-0 inset-y-0 w-16 rounded-full border-2 border-primary/30 animate-ping pointer-events-none" />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { Clock, MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { Clock, MapPin, Phone, Mail, Instagram, Facebook, Mic } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -146,6 +146,14 @@ const Contact = () => {
                   className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter"
                 >
                   Online reservieren
+                </Button>
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-inter group"
+                >
+                  <Mic className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+                  KI-Sprachbuchung
                 </Button>
                 <Button 
                   size="lg"

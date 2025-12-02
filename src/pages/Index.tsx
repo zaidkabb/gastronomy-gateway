@@ -5,6 +5,7 @@ import Menu from "@/components/Menu";
 import Reviews from "@/components/Reviews";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import FloatingAIButtons from "@/components/FloatingAIButtons";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Reviews />
       <Contact />
       <Footer />
+      <FloatingAIButtons />
     </div>
   );
 };

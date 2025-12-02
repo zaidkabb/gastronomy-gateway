@@ -1,4 +1,4 @@
-import { Clock, MapPin, Phone, Mail, Instagram, Facebook, Mic } from "lucide-react";
+import { Clock, MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -130,57 +130,6 @@ const Contact = () => {
           </Card>
         </div>
 
-        {/* Reservation CTA */}
-        <div className="mt-12 text-center">
-          <Card className="border-primary/20 shadow-xl max-w-2xl mx-auto bg-gradient-to-br from-primary/5 to-accent/5">
-            <CardContent className="p-12">
-              <h3 className="font-playfair text-3xl font-bold text-foreground mb-4">
-                Tisch reservieren
-              </h3>
-              <p className="text-muted-foreground font-inter mb-6">
-                Sichern Sie sich Ihren Platz für ein unvergessliches kulinarisches Erlebnis
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter"
-                  onClick={() => {
-                    const widget = document.querySelector('vapi-widget');
-                    if (widget) {
-                      widget.setAttribute('mode', 'chat');
-                      (widget as any).open?.();
-                    }
-                  }}
-                >
-                  Online reservieren
-                </Button>
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-inter group"
-                  onClick={() => {
-                    const widget = document.querySelector('vapi-widget');
-                    if (widget) {
-                      widget.setAttribute('mode', 'voice');
-                      (widget as any).open?.();
-                    }
-                  }}
-                >
-                  <Mic className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-                  KI-Sprachbuchung
-                </Button>
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-inter"
-                  asChild
-                >
-                  <a href="tel:+498912345678">Anrufen</a>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );

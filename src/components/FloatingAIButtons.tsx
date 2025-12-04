@@ -1,4 +1,4 @@
-import { Mic, MessageCircle } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 const FloatingAIButtons = () => {
@@ -22,14 +22,14 @@ const FloatingAIButtons = () => {
           onClick={handleVoiceCall}
           onMouseEnter={() => setHoveredButton("voice")}
           onMouseLeave={() => setHoveredButton(null)}
-          className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground shadow-2xl hover:shadow-primary/50 transition-all duration-300 flex items-center justify-center group-hover:scale-110 relative overflow-hidden"
+          className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground shadow-xl hover:shadow-primary/50 transition-all duration-300 flex items-center justify-center group-hover:scale-110 relative overflow-hidden"
           aria-label="Voice Call"
         >
           {/* Animated background ripple */}
           <div className="absolute inset-0 rounded-full bg-primary/20 animate-pulse" />
           
           {/* Icon */}
-          <Mic className={`w-7 h-7 relative z-10 transition-transform duration-300 ${hoveredButton === "voice" ? "scale-110 animate-pulse" : ""}`} />
+          <Phone className={`w-5 h-5 relative z-10 transition-transform duration-300 ${hoveredButton === "voice" ? "scale-110 animate-pulse" : ""}`} />
           
           {/* Glow effect */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/0 via-primary-foreground/20 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -48,14 +48,14 @@ const FloatingAIButtons = () => {
           onClick={handleChatbot}
           onMouseEnter={() => setHoveredButton("chat")}
           onMouseLeave={() => setHoveredButton(null)}
-          className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-accent-foreground shadow-2xl hover:shadow-accent/50 transition-all duration-300 flex items-center justify-center group-hover:scale-110 relative overflow-hidden"
+          className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-accent-foreground shadow-xl hover:shadow-accent/50 transition-all duration-300 flex items-center justify-center group-hover:scale-110 relative overflow-hidden"
           aria-label="Chatbot"
         >
           {/* Animated background */}
           <div className="absolute inset-0 rounded-full bg-accent/20" />
           
           {/* Icon */}
-          <MessageCircle className={`w-7 h-7 relative z-10 transition-transform duration-300 ${hoveredButton === "chat" ? "scale-110" : ""}`} />
+          <MessageCircle className={`w-5 h-5 relative z-10 transition-transform duration-300 ${hoveredButton === "chat" ? "scale-110" : ""}`} />
           
           {/* Glow effect */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent/0 via-accent-foreground/20 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

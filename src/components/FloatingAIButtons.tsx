@@ -4,7 +4,7 @@ import { useVapi } from "@/hooks/useVapi";
 import VapiChatModal from "./VapiChatModal";
 
 // Replace with your Vapi assistant ID
-const VAPI_ASSISTANT_ID = "your-assistant-id";
+const VAPI_ASSISTANT_ID = "6b90e793-2f4a-4b7c-86c2-3f868ba7eee8";
 
 const FloatingAIButtons = () => {
   const [hoveredButton, setHoveredButton] = useState<string | null>(null);

@@ -3,9 +3,8 @@ import { useState } from "react";
 import { useVapi } from "@/hooks/useVapi";
 import VapiChatModal from "./VapiChatModal";
 
-// Replace these with your actual Vapi assistant IDs
-const VOICE_ASSISTANT_ID = "your-voice-assistant-id";
-const CHAT_ASSISTANT_ID = "your-chat-assistant-id";
+// Replace with your Vapi assistant ID
+const VAPI_ASSISTANT_ID = "your-assistant-id";
 
 const FloatingAIButtons = () => {
   const [hoveredButton, setHoveredButton] = useState<string | null>(null);
@@ -23,7 +22,7 @@ const FloatingAIButtons = () => {
     if (isCallActive) {
       endCall();
     } else {
-      await startCall(VOICE_ASSISTANT_ID);
+      await startCall(VAPI_ASSISTANT_ID);
     }
   };
 
@@ -109,7 +108,7 @@ const FloatingAIButtons = () => {
       <VapiChatModal 
         isOpen={isChatOpen} 
         onClose={() => setIsChatOpen(false)} 
-        assistantId={CHAT_ASSISTANT_ID}
+        assistantId={VAPI_ASSISTANT_ID}
       />
     </>
   );
